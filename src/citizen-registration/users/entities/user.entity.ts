@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn,OneToOne } from "typeorm";
 @Entity()
 export class User {
     @PrimaryGeneratedColumn()
@@ -33,4 +33,6 @@ export class User {
 
     @Column()
     profession: string;
+
+     
 }
