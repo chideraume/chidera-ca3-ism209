@@ -33,6 +33,7 @@ export class User {
 
     @Column()
     profession: string;
+    LinkedIdentity: any;
 
      
 }

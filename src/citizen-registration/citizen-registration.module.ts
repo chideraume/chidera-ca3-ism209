@@ -4,6 +4,11 @@ import { LinkedIdentitiesModule } from './linked-identities/linked-identities.mo
  
 
 @Module({
-  imports: [UsersModule, LinkedIdentitiesModule,  ]
+  imports: [UsersModule, LinkedIdentitiesModule]
 })
 export class CitizenRegistrationModule {}
+
+
+
+
+
