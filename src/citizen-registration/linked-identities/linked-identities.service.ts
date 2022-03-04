@@ -1,7 +1,7 @@
-import { Injectable } from '@nestjs/common';
+import { HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
- import { User } from '../users/entities/user.entity';
+import { User } from '../users/entities/user.entity';
 import { CreateLinkedIdentityDto } from './dto/create-linked-identity.dto';
 import { UpdateLinkedIdentityDto } from './dto/update-linked-identity.dto';
 import { LinkedIdentity } from './entities/linked-identity.entity';
@@ -10,9 +10,18 @@ import { LinkedIdentity } from './entities/linked-identity.entity';
 export class LinkedIdentitiesService {
   constructor(
     @InjectRepository(LinkedIdentity)
-    private LinkedIdentitiesRespository: Repository<LinkedIdentity>
+    private LinkedIdentitiesRespository: Repository<LinkedIdentity>,
+
+    
+    @InjectRepository(User)
+    private userRepository: Repository<User>
+
   ) { }
-  async create(_createLinkedIdentityDto: CreateLinkedIdentityDto) {
+  async create(_createLinkedIdentityDto: CreateLinkedIdentityDto) 
+  
+
+
+  {
     return this.LinkedIdentitiesRespository.save(new LinkedIdentity);
   }
 

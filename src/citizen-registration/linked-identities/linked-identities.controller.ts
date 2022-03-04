@@ -12,8 +12,8 @@ export class LinkedIdentitiesController {
     return this.linkedIdentitiesService.create(createLinkedIdentityDto);
   }
 
-  @Get()
-  @Render('linked-identities/create-linkedidentity.html')
+  @Get('create')
+  @Render('users/create-user.html')
   createForm() {
     
   }

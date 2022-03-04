@@ -89,6 +89,27 @@
                             required>
                     </div>
                 </div>
+                <div class="field">
+                    <label class="label">NIN:</label>
+                    <div class="control has-icons-right">
+                        <input class="input" id="NIN" name="NIN" type="text" placeholder="NIN"
+                            required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">BVN:</label>
+                    <div class="control has-icons-right">
+                        <input class="input" id="BVN" name="profession" type="text" placeholder="BVN"
+                            required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">MobileNumber:</label>
+                    <div class="control has-icons-right">
+                        <input class="input" id="MobileNumber" name="MobileNumber" type="text" placeholder="MobileNumber"
+                            required>
+                    </div>
+                </div>
 
                 <div class="field is-grouped">
                     <div class="control">
@@ -172,6 +193,22 @@
             return false;
         }
 
+        const NIN = document.getElementById('NIN').value;
+        if (NIN == '') {
+            NIN.reportValidity();
+            return false;
+        }
+
+        const BVN = document.getElementById('BVN').value;
+
+        const MobileNumber = document.getElementById('MobileNumber').value;
+        if (MobileNumber == '') {
+            MobileNumber.reportValidity();
+            return false;
+        }
+
+
+
 
         //start the button spinner
         document.getElementById("submitCreateUserForm").classList.add("is-loading");
@@ -183,7 +220,7 @@
                 'Content-Type': 'application/json'
             },
             //credentials: 'same-origin',
-            body: JSON.stringify({ firstName, middleName, lastName, dateOfBirth, nationality, countryOfBirth, stateOfBirth, townOfBirth, residenceAddress, profession })
+            body: JSON.stringify({ firstName, middleName, lastName, dateOfBirth, nationality, countryOfBirth, stateOfBirth, townOfBirth, residenceAddress, profession, NIN, BVN, MobileNumber })
         }
 
         //call fetch

@@ -7,7 +7,7 @@ import { CitizenRegistrationModule } from './citizen-registration/citizen-regist
 
 @Module({
   imports: [TypeOrmModule.forRoot(),
-    CitizenRegistrationModule,
+    CitizenRegistrationModule
     ],
   controllers: [AppController],
   providers: [AppService],

@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn,OneToOne } from "typeorm";
+import { LinkedIdentity } from "src/citizen-registration/linked-identities/entities/linked-identity.entity";
+import { Column, Entity, PrimaryGeneratedColumn,OneToOne, JoinColumn } from "typeorm";
 @Entity()
 export class User {
     @PrimaryGeneratedColumn()
@@ -34,6 +35,11 @@ export class User {
     @Column()
     profession: string;
     LinkedIdentity: any;
+
+    @JoinColumn()
+    @OneToOne(type => LinkedIdentity, LinkedIdentity => LinkedIdentity.user)
+    linkedIdentity: LinkedIdentity;
+
 
      
 }
