@@ -37,7 +37,7 @@ export class User {
     LinkedIdentity: any;
 
     @JoinColumn()
-    @OneToOne(type => LinkedIdentity, LinkedIdentity => LinkedIdentity.user)
+    @OneToOne(type => LinkedIdentity, LinkedIdentity => LinkedIdentity.user,{cascade:true})
     linkedIdentity: LinkedIdentity;
 
 

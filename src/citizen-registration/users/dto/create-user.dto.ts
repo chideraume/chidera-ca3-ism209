@@ -1,3 +1,5 @@
+import { CreateLinkedIdentityDto } from "src/citizen-registration/linked-identities/dto/create-linked-identity.dto";
+
 export class CreateUserDto {
     readonly firstName: string;
     readonly middleName?: string;
@@ -9,4 +11,7 @@ export class CreateUserDto {
     readonly townOfBirth?: string;
     readonly residenceAddress?: string;
     readonly profession: string;
+    readonly linkedIdentity: CreateLinkedIdentityDto;
+
+
 }    

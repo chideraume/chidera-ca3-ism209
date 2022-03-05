@@ -14,6 +14,6 @@ BVN: number;
 MobileNumber: number;
 
 @JoinColumn()
-@OneToOne(type => User, user => user.linkedIdentity, {cascade:true})
+@OneToOne(type => User, user => user.linkedIdentity)
 user: User; 
 }
