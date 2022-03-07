@@ -13,7 +13,7 @@ BVN: number;
 @Column()
 MobileNumber: number;
 
-@JoinColumn()
+
 @OneToOne(type => User, user => user.linkedIdentity)
 user: User; 
 }

@@ -220,7 +220,7 @@
                 'Content-Type': 'application/json'
             },
             //credentials: 'same-origin',
-            body: JSON.stringify({ firstName, middleName, lastName, dateOfBirth, nationality, countryOfBirth, stateOfBirth, townOfBirth, residenceAddress, profession, NIN, BVN, MobileNumber })
+            body: JSON.stringify({ firstName, middleName, lastName, dateOfBirth, nationality, countryOfBirth, stateOfBirth, townOfBirth, residenceAddress, profession, linkedIdentity:{ NIN, BVN, MobileNumber }})
         }
 
         //call fetch
